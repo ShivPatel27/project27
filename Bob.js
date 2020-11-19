@@ -1,12 +1,12 @@
 class Bob{
     constructor(x,y,r){
-        var options =
-        {
-            isStatic: false,
-            restitution: 0.3,
-            friction:0.5,
-            density: 1.2
-        }
+       // var options =
+        var options = { 
+            restitution: 1,
+            density: 1,
+            inertia: Infinity,
+            slop : 1, 
+            frictionAir: 0.0};
         this.x = x;
         this.y = y;
         this.r = r;
@@ -15,10 +15,6 @@ class Bob{
         
 
     }
-   
-        
-       
-    
     display(){
          
         var paperpos = this.body.position;
